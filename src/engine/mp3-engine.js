@@ -2,8 +2,6 @@
 mp3编码器用到的lamejs编码引擎，一般都用MP3格式，浏览器支持广泛，此引擎测试的也比较多，稳定
 https://github.com/xiangyuecn/Recorder
 */
-(function(){
-"use strict";
 
 //end2 ****开始copy lamejs*****
 /*
@@ -11,8 +9,9 @@ mp3编码依赖lamejs，如果无需mp3支持直接移除此代码
 https://github.com/zhuker/lamejs/blob/bfb7f6c6d7877e0fe1ad9e72697a871676119a0e/lame.all.js
 */
 
-function lamejs() {
-var Math_log10=function(s){//坚决不能用也不要报语言问题的错误
+
+function lamejs() {   
+    var Math_log10=function(s) {//坚决不能用也不要报语言问题的错误
 	return Math.log(s)/Math.log(10);
 };
 
@@ -154,28 +153,7 @@ VbrMode.vbr_abr = new VbrMode(3);
 VbrMode.vbr_mtrh = new VbrMode(4);
 VbrMode.vbr_default = VbrMode.vbr_mtrh;
 
-var assert = function (x) {
-    //console.assert(x);
-};
 
-var module_exports = {
-    "System": System,
-    "VbrMode": VbrMode,
-    "Float": Float,
-    "ShortBlock": ShortBlock,
-    "Util": Util,
-    "Arrays": Arrays,
-    "new_array_n": new_array_n,
-    "new_byte": new_byte,
-    "new_double": new_double,
-    "new_float": new_float,
-    "new_float_n": new_float_n,
-    "new_int": new_int,
-    "new_int_n": new_int_n,
-    "new_short": new_short,
-    "new_short_n": new_short_n,
-    "assert": assert
-};
 //package mp3;
 
 /* MPEG modes */
@@ -14167,7 +14145,7 @@ lamejs.Mp3Encoder = Mp3Encoder;
 lamejs();
 
 
-Recorder.lamejs=lamejs;
+
+export default lamejs;
 
 //end3 ****结束copy lamejs*****
-})();
