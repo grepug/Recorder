@@ -1,4 +1,4 @@
-declare module "recorder" {
+declare module "@grepug/recorder" {
   const Recorder: (opts: {
     type: "mp3";
     sampleRate: number;
